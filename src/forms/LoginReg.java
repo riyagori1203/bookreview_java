@@ -26,8 +26,8 @@ public class LoginReg extends javax.swing.JFrame {
                 boolean flag = false;
                 try {
                         Class.forName("com.mysql.jdbc.Driver");
-                        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/login", "Riya",
-                                        "Justchill2*");
+                        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/login", "username",
+                                        "password*");
                         Statement stmt = conn.createStatement();
                         String qrry = "SELECT * FROM Student3 WHERE username=\"" + usr + "\" and password=\"" + pswd
                                         + "\" ;";
@@ -59,8 +59,8 @@ public class LoginReg extends javax.swing.JFrame {
                 boolean flag = false;
                 try {
                         Class.forName("com.mysql.jdbc.Driver");
-                        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/login", "Riya",
-                                        "Justchill2*");
+                        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/login", "username",
+                                        "password*");
 
                         String qrry = "INSERT INTO Student3 values('" + usr + "','" + pswd + "','" + nm + "','" + email
                                         + "','" + phone + "')";
